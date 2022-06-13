@@ -4,7 +4,6 @@ go 1.18
 
 require (
 	github.com/ChainSafe/log15 v1.0.0
-	github.com/btcsuite/btcd v0.20.1-beta // indirect
 	github.com/centrifuge/go-substrate-rpc-client v2.0.0+incompatible
 	github.com/ethereum/go-ethereum v1.10.18
 	github.com/golang/protobuf v1.3.3 // indirect
@@ -14,5 +13,4 @@ require (
 	github.com/prometheus/procfs v0.0.10 // indirect
 	golang.org/x/crypto v0.0.0-20200709230013-948cd5f35899
 	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
-	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
