@@ -4,8 +4,8 @@
 package core
 
 import (
-	metrics "github.com/ChainSafe/chainbridge-utils/metrics/types"
-	"github.com/ChainSafe/chainbridge-utils/msg"
+	metrics "github.com/UltronFoundationDev/chainbridge-utils/metrics/types"
+	"github.com/UltronFoundationDev/chainbridge-utils/msg"
 )
 
 type Chain interface {
@@ -18,14 +18,15 @@ type Chain interface {
 }
 
 type ChainConfig struct {
-	Name           string            // Human-readable chain name
-	Id             msg.ChainId       // ChainID
-	Endpoint       string            // url for rpc endpoint
-	From           string            // address of key to use
-	KeystorePath   string            // Location of key files
-	Insecure       bool              // Indicated whether the test keyring should be used
-	BlockstorePath string            // Location of blockstore
-	FreshStart     bool              // If true, blockstore is ignored at start.
-	LatestBlock    bool              // If true, overrides blockstore or latest block in config and starts from current block
-	Opts           map[string]string // Per chain options
+	Name           string                              // Human-readable chain name
+	Id             msg.ChainId                         // ChainID
+	Endpoint       string                              // url for rpc endpoint
+	From           string                              // address of key to use
+	KeystorePath   string                              // Location of key files
+	Insecure       bool                                // Indicated whether the test keyring should be used
+	BlockstorePath string                              // Location of blockstore
+	FreshStart     bool                                // If true, blockstore is ignored at start.
+	LatestBlock    bool                                // If true, overrides blockstore or latest block in config and starts from current block
+	Opts           map[string]string                   // Per chain options
+	Decimals       map[msg.ChainId]map[string][2]uint8 // Fix dest token decimals
 }
